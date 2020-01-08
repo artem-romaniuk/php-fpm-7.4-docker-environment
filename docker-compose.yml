@@ -80,3 +80,16 @@ services:
     restart: unless-stopped
     ports:
       - ${ADMINER_PORT}:8080
+
+#  node:
+#    build: build/node
+#    restart: unless-stopped
+#    working_dir: /home/node/app
+#    environment:
+#      - NPM_CONFIG_LOGLEVEL=${NPM_CONFIG_LOGLEVEL}
+#      - NODE_ENV={NODE_ENV}
+#    volumes:
+#      - ./node/:/home/node/app
+#    ports:
+#      - ${NODE_PORT}:3000
+#    command: "npm start"
